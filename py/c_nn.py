@@ -133,7 +133,7 @@ class nn:
 				layer['resources'] = layer['resources'] + 1
 				self.__parse_configuration_set_execution_time()
 		
-		self.show_configuration()
+		# self.show_configuration()
 
 	def generate_testbench(self):
 		# generate input data file
