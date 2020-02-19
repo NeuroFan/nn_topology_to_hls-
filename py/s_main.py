@@ -1,7 +1,8 @@
 #!/usr/bin/python
 from c_nn import *
 
-PATH_NN_OBJECT = '../topology_example.json'
+# PATH_NN_OBJECT = '../topology_example.json'
+PATH_NN_OBJECT = '../topology_8_16_12_8_4.json'
 PATH_TEST_DATA = '../topology_example_test.json'
 
 if __name__ == "__main__":
@@ -16,14 +17,14 @@ if __name__ == "__main__":
 	print
 
 	# update configuration
-	obj.update_configuration_max_execution(40)
+	obj.update_configuration_max_execution(32)
 	# print
 
 	# apply data type configuration 
-	# obj.set_dtype("float")
-	obj.set_dtype_fixed(16, 7)
-	obj.set_dtype_fixed_LUT_input(12, 4)
-	obj.set_dtype_fixed_LUT_output(16, 7)
+	obj.set_dtype("float")
+	# obj.set_dtype_fixed(16, 7)
+	# obj.set_dtype_fixed_LUT_input(12, 4)
+	# obj.set_dtype_fixed_LUT_output(16, 7)
 
 	# select interface
 	obj.set_interface("s_axis")
