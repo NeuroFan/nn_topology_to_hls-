@@ -90,8 +90,9 @@ class nn:
 		self.path_testbench = path
 
 	def set_test_file(self, fname):
-		self.json_test  = json.load(open(fname))
-		self.test_count =  len(self.json_test["inputs"])
+		if fname != None:
+			self.json_test  = json.load(open(fname))
+			self.test_count =  len(self.json_test["inputs"])
 
 	def parse_configuration(self):
 		# get layers
@@ -147,7 +148,7 @@ class nn:
 
 		# generate testbench file
 		fname = self.path_testbench + "/" + FNAME_CPP_TESTBENCH
-		print fname
+		print(fname)
 		fd = open(fname, "w")
 
 		# includes
