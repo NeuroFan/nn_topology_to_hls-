@@ -449,7 +449,7 @@ class nn:
 
 		# lay out neural network inout constants
 		fd.write("#define NN_INPUT_COUNT  LAYER_0_INPUTS\n")
-		fd.write("#define NN_OUTPUT_COUNT LAYER_" + str(self.current_layer-1) + "_OUTPUS\n\n")
+		fd.write("#define NN_OUTPUT_COUNT LAYER_" + str(self.current_layer-1) + "_OUTPUTS\n\n")
 
 		# lay out neural network LUT constants and macros
 		for idx in range(0, self.current_layer):
